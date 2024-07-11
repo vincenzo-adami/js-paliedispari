@@ -6,4 +6,15 @@ function randomNumber1_5() { // numero casuale intervallo 1-5
   return Math.round(Math.random() * 5);
 }
 
+let pcNumber = randomNumber1_5();
 
+let sumChoicedNumber = userNumber + pcNumber;
+
+function isOddOrEven(number) { // stabilisce se il numero dato è pari o dispari ritornando la stringa con il risultato
+
+  if ((number % 2) === 0) {
+    return 'pari'
+  } else {
+    return 'dispari'
+  }
+}
