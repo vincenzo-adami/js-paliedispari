@@ -1,7 +1,6 @@
 let userChoice = prompt('Scegli tra "pari" o "dispari"'); //string | null
 let userNumber = parseInt(prompt('Scegli un numero da 1 a 5')) //number | NaN
 
-
 function randomNumber1_5() { // numero casuale intervallo 1-5
   return Math.round(Math.random() * 5);
 }
@@ -17,4 +16,12 @@ function isOddOrEven(number) { // stabilisce se il numero dato è pari o dispari
   } else {
     return 'dispari'
   }
+}
+
+let winner = isOddOrEven(sumChoicedNumber);
+
+if (userChoice === winner) {
+  console.log('Ha vinto il giocatore')
+} else {
+  console.log('Ha vinto il PC')
 }
