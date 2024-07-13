@@ -3,16 +3,13 @@ let userWordNeutralized = userWord.toLowerCase();
 
 function isPalindrome(word) { // verifica se la parola è palindroma ||| ritorna un valore boolean
   let wordLength = word.length;
-  let result;
 
-  for (let i = 0; i < wordLength; i++) {
-    if (word[i] === word[(wordLength - 1) - i]) {
-      result = true
-    } else {
-      result = false
+  for (let i = 0; i < Math.floor(wordLength / 2); i++) {
+    if (word[i] !== word[(wordLength - 1) - i]) {
+      return false
     }
   }
-  return result
+  return true
 }
 
 let verifyPalindrome = isPalindrome(userWordNeutralized)
